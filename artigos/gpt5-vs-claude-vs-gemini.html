@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPT-5 vs. Claude vs. Gemini — AI Wire</title>
+  <meta name="description" content="Comparativo hands-on de GPT-5, Claude e Gemini em tarefas reais de código." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body data-theme="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">AI <span>Wire</span></a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="/categorias/frameworks.html">Frameworks</a>
+        <a href="/categorias/modelos.html">Modelos</a>
+        <a href="/categorias/agentes.html">Agentes</a>
+        <a href="/categorias/open-source.html">Open Source</a>
+        <a href="/categorias/guia-do-dev.html">Guia do Dev</a>
+        <a href="/categorias/analises.html">Análises</a>
+        <a href="/categorias/benchmarks.html">Benchmarks</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Buscar">🔍</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">🌙</button>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <article class="article-hero">
+      <span class="tag">Modelos</span>
+      <h1 class="article-title">GPT-5 vs. Claude vs. Gemini: o grande comparativo de código</h1>
+      <div class="article-meta">
+        <div class="avatar">AW</div>
+        <div><strong>Equipe AI Wire</strong><br/>12 set 2026 · 8 min de leitura</div>
+      </div>
+      <img src="https://placehold.co/1200x500/1a1a1d/5b8cff?text=GPT-5+vs+Claude+vs+Gemini" alt="Comparativo de modelos" />
+    </article>
+    <div class="article-content">
+      <p>Quando três modelos de fronteira chegam quase ao mesmo tempo, a pergunta deixa de ser "qual é o melhor?" e vira "qual é o melhor <em>para o meu caso</em>?" Rodamos o mesmo conjunto de tarefas de engenharia nos três e medimos o que importa: correção, latência e custo.</p>
+      <h2>A metodologia</h2>
+      <p>Cem tarefas reais extraídas de repositórios open source: refatoração, correção de bug, geração de testes e explicação de código legado. Cada modelo recebeu o mesmo prompt, sem few-shot, temperatura 0.2.</p>
+      <pre><code>tarefas = 100
+modelos = ["gpt-5", "claude-sonnet", "gemini-2.5-pro"]
+metricas = ["pass@1", "latencia_ms", "custo_usd"]</code></pre>
+      <h2>Os números</h2>
+      <p>GPT-5 liderou em pass@1 (84%), mas pagou o preço: latência média de 3.1s e custo 2.4x maior que o Gemini. Claude ficou no meio — 79% de acerto, latência 1.8s, custo intermediário. Gemini surpreendeu em throughput: 1.1s de first-token e o menor custo por tarefa.</p>
+      <blockquote>O modelo mais barato não é o pior. Às vezes é só o mais honesto sobre o que não sabe.</blockquote>
+      <h2>Veredito</h2>
+      <p>Para agentes autônomos de longa duração, o custo manda — Gemini. Para refatoração crítica onde um erro custa caro, GPT-5. Claude é o meio-termo seguro quando você não sabe qual dos dois escolher.</p>
+      <p><strong>Score geral:</strong> GPT-5 8.4 · Claude 8.1 · Gemini 7.9</p>
+    </div>
+    <section class="related">
+      <h2 class="section-title">Artigos relacionados</h2>
+      <div class="card-grid" id="relatedGrid"></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><strong>AI Wire</strong><p>A publicação de referência em português para quem constrói com IA.</p></div>
+      <p class="copyright">© 2026 AI Wire.</p>
+    </div>
+  </footer>
+  <script src="/app.js"></script>
+  <script>
+    const related = articles.filter(a => a.slug !== 'gpt5-vs-claude-vs-gemini').slice(0, 3);
+    document.getElementById('relatedGrid').innerHTML = related.map(cardHTML).join('');
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Wire — Portal de notícias de IA</title>
+  <meta name="description" content="AI Wire: a publicação de referência em português para quem constrói com IA. Frameworks, modelos, agentes, open source e benchmarks." />
+  <meta property="og:title" content="AI Wire — Portal de notícias de IA" />
+  <meta property="og:description" content="Cobertura técnica de IA aplicada: frameworks, modelos, agentes e projetos open source, em português." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body data-theme="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">AI <span>Wire</span></a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="/categorias/frameworks.html">Frameworks</a>
+        <a href="/categorias/modelos.html">Modelos</a>
+        <a href="/categorias/agentes.html">Agentes</a>
+        <a href="/categorias/open-source.html">Open Source</a>
+        <a href="/categorias/guia-do-dev.html">Guia do Dev</a>
+        <a href="/categorias/analises.html">Análises</a>
+        <a href="/categorias/benchmarks.html">Benchmarks</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Buscar" title="Buscar">🔍</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <article class="hero-card">
+        <span class="tag">Destaque</span>
+        <h1>GPT-5 vs. Claude vs. Gemini: o grande comparativo de código</h1>
+        <p class="hero-excerpt">Testamos os três modelos no mesmo conjunto de tarefas reais de engenharia. Os números surpreendem — e nem sempre onde você espera.</p>
+        <div class="hero-meta">
+          <span>Por Equipe AI Wire</span>
+          <span>·</span>
+          <span>12 set 2026</span>
+          <span>·</span>
+          <span>8 min de leitura</span>
+        </div>
+        <a href="/artigos/gpt5-vs-claude-vs-gemini.html" class="btn btn-primary">Leia mais</a>
+      </article>
+    </section>
+
+    <div class="layout-grid">
+      <section class="feed" aria-label="Últimas notícias">
+        <h2 class="section-title">Últimas notícias</h2>
+        <div class="card-grid" id="cardGrid">
+          <!-- cards injetados via JS -->
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <h3>🔥 Trending</h3>
+          <ol class="trending-list" id="trendingList"></ol>
+        </div>
+        <div class="widget newsletter-widget">
+          <h3>Newsletter</h3>
+          <p>10 destaques de IA toda semana, sem ruído.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); this.reset(); alert('Inscrito! Obrigado.');">
+            <input type="email" placeholder="seu@email.com" required aria-label="Email" />
+            <button type="submit" class="btn btn-primary">Assinar</button>
+          </form>
+        </div>
+        <div class="widget">
+          <h3>Benchmarks em destaque</h3>
+          <ul class="bench-list">
+            <li><a href="/categorias/benchmarks.html">Bench mensal de modelos de código</a></li>
+            <li><a href="/categorias/benchmarks.html">Custo por milhão de tokens — 12 provedores</a></li>
+            <li><a href="/categorias/benchmarks.html">Latência first-token em streaming</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <section class="most-read">
+      <h2 class="section-title">Mais lidos da semana</h2>
+      <ol class="most-read-list" id="mostReadList"></ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>AI Wire</strong>
+        <p>A publicação de referência em português para quem constrói com IA.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/categorias/frameworks.html">Frameworks</a>
+        <a href="/categorias/modelos.html">Modelos</a>
+        <a href="/categorias/agentes.html">Agentes</a>
+        <a href="/categorias/open-source.html">Open Source</a>
+        <a href="/categorias/guia-do-dev.html">Guia do Dev</a>
+        <a href="/categorias/analises.html">Análises</a>
+        <a href="/categorias/benchmarks.html">Benchmarks</a>
+      </div>
+      <p class="copyright">© 2026 AI Wire. Conteúdo técnico, sem clickbait.</p>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

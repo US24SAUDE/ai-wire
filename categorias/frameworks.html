@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Frameworks — AI Wire</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body data-theme="dark">
+<header class="site-header"><div class="container header-inner">
+<a href="/" class="logo">AI <span>Wire</span></a>
+<nav class="main-nav"><a href="/categorias/frameworks.html">Frameworks</a><a href="/categorias/modelos.html">Modelos</a><a href="/categorias/agentes.html">Agentes</a><a href="/categorias/open-source.html">Open Source</a><a href="/categorias/guia-do-dev.html">Guia do Dev</a><a href="/categorias/analises.html">Análises</a><a href="/categorias/benchmarks.html">Benchmarks</a></nav>
+<div class="header-actions"><button class="icon-btn">🔍</button><button class="theme-toggle" id="themeToggle">🌙</button></div>
+</div></header>
+<main class="container">
+<div class="category-header"><h1>Frameworks</h1><p>LangChain, LlamaIndex, CrewAI, AutoGen, LangGraph e o ecossistema de orquestração.</p></div>
+<div class="card-grid" id="catGrid"></div>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><div><strong>AI Wire</strong></div><p class="copyright">© 2026 AI Wire.</p></div></footer>
+<script src="/app.js"></script>
+<script>document.getElementById('catGrid').innerHTML = articles.filter(a=>a.catSlug==='frameworks').map(cardHTML).join('') || '<p style="color:var(--text-muted)">Artigos em breve.</p>';</script>
+</body></html>
